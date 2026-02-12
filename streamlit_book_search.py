@@ -143,7 +143,7 @@ with tab1:
     if not st.session_state.books_df.empty:
         st.write("전체 검색 결과")
         # st.dataframe()에서 use_container_width=True를 설정하면 데이터프레임이 Streamlit 컨테이너의 전체 너비에 맞게 자동 확장됩니다.
-        render_books_df = st.session_state.books_df.loc[:,['title']]
+        render_books_df = st.session_state.books_df.loc[:,['title','author','discount','publisher']]
         st.dataframe(render_books_df, use_container_width=True)
     else:
         st.info("검색 결과가 없습니다. 검색 버튼을 클릭하여 결과를 불러오세요.")
