@@ -56,7 +56,7 @@ else:
         width='100%',
         update_mode=GridUpdateMode.MODEL_CHANGED,
         columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS,
-        theme='streamlit' # 또는 'alpine', 'balham', 'material'
+        theme='material' # 또는 'alpine', 'balham', 'material'
     )
 
     # AgGrid에서 수정한 데이터를 그래프에 반영하기 위해 데이터 가져오기
