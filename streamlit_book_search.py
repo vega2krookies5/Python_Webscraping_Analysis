@@ -92,8 +92,9 @@ def filter_books_by_publisher(df, publisher_name):
         return pd.DataFrame()
     
     # 컬럼 목록 필터링 ('image'와 'description' 제외) ['title','author'...]
-    columns_to_show = [col for col in df.columns if col not in ['image', 'description']]
-    
+    #columns_to_show = [col for col in df.columns if col not in ['image', 'description']]
+    columns_to_show = df.columns.drop(['image', 'description','link'])
+
     return (
         df.loc[df['publisher'].str.contains(publisher_name, na=False), columns_to_show]
           .reset_index(drop=True)
